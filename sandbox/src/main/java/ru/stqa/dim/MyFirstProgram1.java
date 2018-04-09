@@ -1,4 +1,6 @@
-public class MyFirstProgram {
+package ru.stqa.dim;
+
+public class MyFirstProgram1 {
 
 
 	public static void main(String[] args) {

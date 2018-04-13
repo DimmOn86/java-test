@@ -8,11 +8,11 @@ public class MyFirstProgram1 {
         hello();
 
         Square s = new Square(5);
-        System.out.println("Площадь квадрата со сторойной " + s.l + " = " + area(s));
+        System.out.println("Площадь квадрата со сторойной " + s.l + " = " + s.area());
 
         Rectangle r = new Rectangle(4,6);
 
-        System.out.println("Произведение чисел " + r.a + " и " + r.b + " = " + area(r));
+        System.out.println("Произведение чисел " + r.a + " и " + r.b + " = " + r.area());
 
     }
 
@@ -20,12 +20,7 @@ public class MyFirstProgram1 {
         System.out.println("Hello, world!");
     }
 
-    public static double area(Square s){
-      return s.l * s.l;
-    }
 
-    public static double area(Rectangle r){
-      return r.a * r.b;
-    }
+
 
 }

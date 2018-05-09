@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-public class GroupHelper extends HelperBase{
+public class GroupHelper extends HelperBase {
 
 
   public GroupHelper(WebDriver wd) {
@@ -35,9 +35,9 @@ public class GroupHelper extends HelperBase{
   }
 
   public void SelectGroup() {
-      if (!wd.findElement(By.name("selected[]")).isSelected()) {
-        click(By.name("selected[]"));
-      }
+    if (!wd.findElement(By.name("selected[]")).isSelected()) {
+      click(By.name("selected[]"));
+    }
   }
 
   public void initGroupModification() {
@@ -58,4 +58,9 @@ public class GroupHelper extends HelperBase{
   public boolean isThereAGroup() {
     return isElementPresent(By.name("selected[]"));
   }
+
+  public int getGroupCount() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
+
 }
